@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js_pub_sub.js"></script>
+</head>
+<body>
+<button onclick="pubsub.subscribe('example1', func);">订阅</button>
+
+
+<button onclick="pubsub.publish('example1', 'Hello World!');">发布Hello World</button>
+
+<button onclick="pubsub.publish('example1',['test', 'a', 'b', 'c'])">发布数组</button>
+<button onclick="pubsub.publish('example1',[{'color': 'blue'}, {'text': 'hello'}])">发布对象</button>
+
+
+</body>
+</html>
