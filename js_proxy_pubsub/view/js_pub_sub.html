@@ -3,17 +3,26 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script src="../js/js_pub_sub.js"></script>
+    <script src="../js/js_pub_sub_001.js"></script>
 </head>
 <body>
 <button onclick="pubsub.subscribe('example1', func);">订阅</button>
+<br/><br/>
 
 
 <button onclick="pubsub.publish('example1', 'Hello World!');">发布Hello World</button>
+<br/><br/>
 
 <button onclick="pubsub.publish('example1',['test', 'a', 'b', 'c'])">发布数组</button>
+<br/><br/>
 <button onclick="pubsub.publish('example1',[{'color': 'blue'}, {'text': 'hello'}])">发布对象</button>
+<br/><br/>
 
+<button onclick="setTimeout(pubsub.unsubscribe(testSubscribe), 0);">退订</button>
+<br/><br/>
 
+<button onclick="pubsub.publish('example1', 'Hello World!');">再次发布</button>
+
+<button onclick="pubsub.showTopics();">显示topics</button>
 </body>
 </html>

@@ -45,9 +45,14 @@ var pubsub = {};
             }
         }
         return false;
+    };
+    q.showTopics = function () {
+        alert(topics);
     }
 }(pubsub));
 
 var func = function (topics, data) {
     console.log(topics + ":" + data)
 };
+
+var testSubscribe = pubsub.subscribe('example1', func);
